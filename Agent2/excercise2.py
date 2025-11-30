@@ -29,7 +29,10 @@ graph.add_edge("greeting_node", END)
 
 app = graph.compile()
 
+
 answer = app.invoke({"name": "kieuanhdev", "values": [1,2,3,4], "operation": "*"})
+
+print(app.get_graph().draw_ascii())
 
 print(answer)
 
